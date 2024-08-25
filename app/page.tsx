@@ -1,5 +1,6 @@
-
+import Image from 'next/image';
 import Navbar from "./components/nav";
+import Footer from "./components/footer";
 
 export default function Home() {
   return (
@@ -13,13 +14,16 @@ export default function Home() {
           </p>
         </div>
         <div className="w-3/5 relative">
-          <img
-            src="/path-to-your-image.jpg" // Substitua pelo caminho real da sua imagem
-            alt="Descrição da Imagem"
-            className="object-cover w-full h-full"
-          />
+        <Image
+  src="/imagens/HomeIMG.png" // Caminho correto
+  alt="Descrição da Imagem"
+  layout="fill"
+  objectFit="cover"
+/>
+
         </div>
       </div>
+      <Footer />
     </>
   );
 }

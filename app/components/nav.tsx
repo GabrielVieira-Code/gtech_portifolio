@@ -7,15 +7,15 @@ export default function Navbar() {
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="text-white text-xl font-bold">
-          <Link href="/pages/cases">Losssgo</Link>
+          <Link href="/pages/cases">Logo</Link>
         </div>
 
         {/* Links */}
         <div className="hidden md:flex space-x-4">
           <Link href="/" className="text-white hover:text-gray-300">Home</Link>
-          <Link href="/about" className="text-white hover:text-gray-300">Sobre</Link>
+          <Link href="/pages/cases" className="text-white hover:text-gray-300">Sobre</Link>
           <Link href="/services" className="text-white hover:text-gray-300">Serviços</Link>
-          <Link href="/contact" className="text-white hover:text-gray-300">Contato</Link>
+          <Link href="/pages/contact" className="text-white hover:text-gray-300">Contato</Link>
         </div>
 
         {/* Botão do menu móvel */}
@@ -32,7 +32,7 @@ export default function Navbar() {
           <Link href="/" className="block text-gray-800 hover:text-blue-600">Home</Link>
           <Link href="/about" className="block text-gray-800 hover:text-blue-600">Sobre</Link>
           <Link href="/services" className="block text-gray-800 hover:text-blue-600">Serviços</Link>
-          <Link href="/contact" className="block text-gray-800 hover:text-blue-600">Contato</Link>
+          <Link href="/pages/contact" className="block text-gray-800 hover:text-blue-600">Contato</Link>
         </div>
       </div>
     </nav>
