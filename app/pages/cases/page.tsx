@@ -24,40 +24,54 @@ export default function Cases() {
   return (
     <>
       <Navbar />
-      <div className="flex flex-col items-center justify-center min-h-screen bg-blue-200 py-8 px-4">
-        <div className="flex flex-wrap items-center justify-center gap-8">
+      <div id="1" className="flex flex-col items-center justify-center min-h-screen bg-blue-200 py-8 px-4">
+        <animated.div style={parallaxStyle} className="flex w-full max-w-screen-lg">
           {/* Texto ao lado da imagem */}
-          <div className="flex-1 min-w-[300px]">
-            <h1 className="text-4xl font-bold text-center text-black mb-4">
+          <div className="flex-1 min-w-[300px] px-4">
+            <h1 className="text-4xl font-bold text-black mb-4">
               Texto Descritivo
             </h1>
-            <p className="text-lg text-center text-gray-700">
+            <p className="text-lg text-gray-700">
               Este é um texto descritivo ao lado das imagens com efeito parallax. Você pode ajustar o conteúdo e o estilo conforme necessário.
             </p>
           </div>
 
-          {/* Imagens com efeito parallax */}
-          <div className="flex-1 min-w-[300px]">
-            <animated.div style={parallaxStyle} className="relative mb-8">
-              <Image
-                src="/imagens/notebookmockup.png"
-                alt="Carro"
-                width={400}
-                height={400}
-                className="w-full h-auto"
-              />
-            </animated.div>
-            <animated.div style={parallaxStyle}>
-              <Image
-                src="/images/scale/motorcycle.png"
-                alt="Motocicleta"
-                width={200}
-                height={200}
-                className="w-full h-auto"
-              />
-            </animated.div>
+          {/* Imagem */}
+          <div className="flex-1 min-w-[300px] relative">
+            <Image
+              src="/imagens/notebookmockup.png"
+              alt="Carro"
+              width={400}
+              height={400}
+              className="w-full h-auto"
+            />
+            
           </div>
-        </div>
+        </animated.div>
+      </div>
+      <div id="1" className="flex flex-col items-center justify-center min-h-screen bg-blue-200 py-8 px-4">
+        <animated.div style={parallaxStyle} className="flex w-full max-w-screen-lg">
+          {/* Texto ao lado da imagem */}
+          <div className="flex-1 min-w-[300px] px-4">
+            <h1 className="text-4xl font-bold text-black mb-4">
+              Texto Descritivo
+            </h1>
+            <p className="text-lg text-gray-700">
+              Este é um texto descritivo ao lado das imagens com efeito parallax. Você pode ajustar o conteúdo e o estilo conforme necessário.
+            </p>
+          </div>
+
+          {/* Imagem */}
+          <div className="flex-1 min-w-[300px] relative">
+            <Image
+              src="/imagens/notebookmockup.png"
+              alt="Carro"
+              width={400}
+              height={400}
+              className="w-full h-auto"
+            />
+          </div>
+        </animated.div>
       </div>
       <Footer />
     </>
