@@ -5,10 +5,10 @@ export default function Navbar() {
   return (
     <nav className="bg-blue-600 p-4">
       <div className="container mx-auto flex items-center justify-between">
-        {/* Logo */}
         <div className="text-white text-xl font-bold">
           <Link href="/pages/cases">Logo</Link>
         </div>
+     
 
         {/* Links */}
         <div className="hidden md:flex space-x-4">
