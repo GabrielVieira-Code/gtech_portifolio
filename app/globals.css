@@ -27,7 +27,11 @@ body {
       rgb(var(--background-end-rgb))
       )
       rgb(var(--background-start-rgb));
-      background-color: white;
+      background-color: rgb(206, 230, 246);
+      font-family: 'Nunito', sans-serif;
+}
+h1, h2, h3, h4, h5, h6, p, a, span, div {
+  font-family: 'Nunito', sans-serif;
 }
 
 @layer utilities {
