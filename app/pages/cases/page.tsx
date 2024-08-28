@@ -5,6 +5,7 @@ import Navbar from "../../components/nav";
 import Footer from "../../components/footer";
 import Image from 'next/image';
 import { useRef } from 'react';
+import { Parallax } from 'react-parallax';
 
 export default function Cases() {
   const sectionRefs = [
@@ -18,13 +19,16 @@ export default function Cases() {
       <Navbar />
 
       <div ref={sectionRefs[0]} className="section" style={{ height: '100vh', backgroundColor: '#58d68d', display: 'flex', alignItems: 'center', padding: '20px' }}>
+      
         <div style={{ flex: 6, paddingRight: '20px' }}>
           <h1 style={{ fontSize: '2.8rem', fontWeight: 'bold', marginBottom: '20px' }}>Sistema Financeiro</h1>
           <p style={{ fontSize: '1.2rem' }}>Este projeto de estudo, desenvolvido com React e TypeScript, é uma aplicação de gestão financeira que permite aos usuários adicionar despesas e receitas, construir um balanço financeiro e filtrar as transações por mês. O projeto visa fornecer uma interface intuitiva para a entrada de dados financeiros e visualização do saldo, categorizando as transações por período. A aplicação também utiliza componentes reutilizáveis e estados gerenciados para manter o controle preciso das finanças, facilitando a análise e monitoramento do orçamento ao longo do tempo.</p>
         </div>
+     {/* <Parallax> */}
         <div style={{ flex: 4 }}>
           <Image src="/imagens/telaSistemaFinanceiros.png" alt="Imagem da Seção 1" width={600} height={400} style={{ maxWidth: '100%', height: 'auto' }} />
         </div>
+     {/* </Parallax> */}
       </div>
 
       <div ref={sectionRefs[1]} className="section" style={{ height: '100vh', backgroundColor: '#C1E1FF', display: 'flex', alignItems: 'center', padding: '20px' }}>

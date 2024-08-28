@@ -20,10 +20,10 @@ export default function Navbar() {
 
         {/* Links */}
         <div className="hidden md:flex space-x-4">
-          <Link href="/" className="text-white hover:text-gray-300">Home</Link>
-          <Link href="/pages/cases" className="text-white hover:text-gray-300">Sobre</Link>
-          <Link href="/services" className="text-white hover:text-gray-300">Serviços</Link>
-          <Link href="/pages/contact" className="text-white hover:text-gray-300">Contato</Link>
+          <Link href="/" className="text-white font-semibold hover:text-gray-300">Home</Link>
+          <Link href="/pages/cases" className="text-white font-semibold hover:text-gray-300">Soluçoes</Link>
+          {/* <Link href="/services" className="text-white font-semibold hover:text-gray-300">Serviços</Link> */}
+          <Link href="/pages/contact" className="text-white font-semibold hover:text-gray-300">Contato</Link>
         </div>
 
         {/* Botão do menu móvel */}
@@ -37,10 +37,10 @@ export default function Navbar() {
       {/* Menu móvel */}
       <div className="md:hidden">
         <div className="p-4">
-          <Link href="/" className="block text-gray-800 hover:text-blue-600">Home</Link>
-          <Link href="/about" className="block text-gray-800 hover:text-blue-600">Sobre</Link>
-          <Link href="/services" className="block text-gray-800 hover:text-blue-600">Serviços</Link>
-          <Link href="/pages/contact" className="block text-gray-800 hover:text-blue-600">Contato</Link>
+          <Link href="/" className="block text-gray-800 font-semibold hover:text-blue-600">Home</Link>
+          <Link href="/pages/cases" className="block text-gray-800 font-semibold hover:text-blue-600">Soluçoes</Link>
+          {/* <Link href="/services" className="block text-gray-800 font-semibold hover:text-blue-600">Serviços</Link> */}
+          <Link href="/pages/contact" className="block text-gray-800 font-semibold hover:text-blue-600">Contato</Link>
         </div>
       </div>
     </nav>

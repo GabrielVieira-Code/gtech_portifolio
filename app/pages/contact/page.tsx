@@ -8,7 +8,7 @@ export default function Contact() {
       <Navbar />
       <div className="min-h-screen bg-beige flex">
         {/* Formulário */}
-        <div className="w-3/5 p-8 bg-white flex flex-col justify-center">
+        <div className="w-3/5 p-8 bg-rgb(206, 230, 246) flex flex-col justify-center">
           <h2 className="text-2xl font-bold mb-4">Entre em Contato</h2>
           <form className="space-y-4">
             <div>
