@@ -19,29 +19,11 @@ export default function Navbar() {
         </div>
 
         {/* Links */}
-        <div className="hidden md:flex space-x-4">
-          <Link href="/" className="text-white font-semibold hover:text-gray-300">Home</Link>
-          <Link href="/pages/cases" className="text-white font-semibold hover:text-gray-300">Soluçoes</Link>
-          {/* <Link href="/services" className="text-white font-semibold hover:text-gray-300">Serviços</Link> */}
-          <Link href="/pages/contact" className="text-white font-semibold hover:text-gray-300">Contato</Link>
-        </div>
-
-        {/* Botão do menu móvel */}
-        <button className="md:hidden text-white focus:outline-none">
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-          </svg>
-        </button>
-      </div>
-
-      {/* Menu móvel */}
-      <div className="md:hidden">
-        <div className="p-4">
-          <Link href="/" className="block text-gray-800 font-semibold hover:text-blue-600">Home</Link>
-          <Link href="/pages/cases" className="block text-gray-800 font-semibold hover:text-blue-600">Soluçoes</Link>
-          {/* <Link href="/services" className="block text-gray-800 font-semibold hover:text-blue-600">Serviços</Link> */}
-          <Link href="/pages/contact" className="block text-gray-800 font-semibold hover:text-blue-600">Contato</Link>
-        </div>
+        <div className="flex space-x-4">
+  <Link href="/" className="text-white font-semibold hover:text-gray-300">Home</Link>
+  <Link href="/pages/cases" className="text-white font-semibold hover:text-gray-300">Soluções</Link>
+  <Link href="/pages/contact" className="text-white font-semibold hover:text-gray-300">Contato</Link>
+</div>
       </div>
     </nav>
   );

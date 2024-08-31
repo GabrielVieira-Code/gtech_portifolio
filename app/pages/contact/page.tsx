@@ -6,9 +6,9 @@ export default function Contact() {
   return (
     <>
       <Navbar />
-      <div className="min-h-screen bg-beige flex">
+      <div className="min-h-screen bg-beige flex flex-col lg:flex-row">
         {/* Formulário */}
-        <div className="w-3/5 p-8 bg-rgb(206, 230, 246) flex flex-col justify-center">
+        <div className="w-full lg:w-3/5 p-8 bg-rgb(206, 230, 246) flex flex-col justify-center">
           <h2 className="text-2xl font-bold mb-4">Entre em Contato</h2>
           <form className="space-y-4">
             <div>
@@ -48,9 +48,9 @@ export default function Contact() {
         </div>
 
         {/* Container para a imagem */}
-        <div className="w-2/5 relative overflow-hidden bg-transparent">
+        <div className="w-full lg:w-2/5 relative overflow-hidden bg-transparent hidden lg:block">
           <Image
-            src="/imagens/contactImage.png" // Caminho correto
+            src="/imagens/contactImage.png"
             alt="Descrição da Imagem"
             layout="fill"
             objectFit="cover"
