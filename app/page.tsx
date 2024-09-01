@@ -2,11 +2,13 @@ import Image from 'next/image';
 import Navbar from "./components/nav";
 import Footer from "./components/footer";
 import './globals.css';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 
 export default function Home() {
   return (
     <>
+    <SpeedInsights ></SpeedInsights>
       <Navbar />
       <div className="flex h-screen">
         {/* Contêiner para o texto */}
