@@ -84,7 +84,7 @@ export default function Cases() {
           <section className="w-full h-screen relative bg-gradient-to-r from-blue-400 to-blue-600 rounded-none shadow-xl overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-12 items-center h-full">
               {/* Left content */}
-              <div className="md:col-span-7 p-10 md:p-24 text-white h-full flex flex-col justify-center">
+              <div className="md:col-span-6 p-10 md:p-24 text-white h-full flex flex-col justify-center">
                 <h1 className="text-4xl md:text-5xl font-extrabold mb-4">{active.title}</h1>
                 <p className="text-lg md:text-xl opacity-90 mb-6">{active.description}</p>
 
@@ -116,11 +116,11 @@ export default function Cases() {
               </div>
 
               {/* Right image */}
-              <div className="md:col-span-5 relative p-8 md:p-12 bg-white/0 flex items-center justify-center h-full">
+              <div className="md:col-span-6 relative p-6 md:p-8 bg-white/0 flex items-center justify-center h-full">
                 <Link href={active.repo} target="_blank" className="block rounded-lg overflow-hidden shadow-2xl max-w-full">
-                  <Image src={active.image} alt={active.title} width={1600} height={1000} className="w-full max-w-[1000px] h-auto object-contain hidden md:block" />
-                  {/* show smaller image on mobile */}
-                  <Image src={active.image} alt={active.title} width={900} height={600} className="w-4/5 h-auto object-contain md:hidden" />
+                  <Image src={active.image} alt={active.title} width={2000} height={1250} className="w-full max-w-[1200px] lg:max-w-[1400px] h-auto object-contain hidden md:block" />
+                  {/* show larger image on mobile */}
+                  <Image src={active.image} alt={active.title} width={1200} height={800} className="w-11/12 h-auto object-contain md:hidden" />
                 </Link>
               </div>
             </div>
