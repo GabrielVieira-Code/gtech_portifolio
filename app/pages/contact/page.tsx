@@ -59,7 +59,7 @@ export default function Contact() {
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         placeholder="Seu Nome"
-                        className="w-full pl-12 pr-4 py-3 rounded-lg border-2 border-blue-200 focus:border-blue-400 outline-none"
+                        className="w-full pl-12 pr-4 py-3 rounded-lg border-2 border-blue-200 focus:border-blue-400 outline-none text-gray-900"
                       />
                     </div>
 
@@ -72,7 +72,7 @@ export default function Contact() {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder="Seu Email"
-                        className="w-full pl-12 pr-4 py-3 rounded-lg border-2 border-blue-200 focus:border-blue-400 outline-none"
+                        className="w-full pl-12 pr-4 py-3 rounded-lg border-2 border-blue-200 focus:border-blue-400 outline-none text-gray-900"
                       />
                     </div>
 
@@ -83,11 +83,12 @@ export default function Contact() {
                         value={subject}
                         onChange={(e) => setSubject(e.target.value)}
                         placeholder="Assunto"
-                        className="w-full pl-12 pr-4 py-3 rounded-lg border-2 border-blue-200 focus:border-blue-400 outline-none"
+                        className="w-full pl-12 pr-4 py-3 rounded-lg border-2 border-blue-200 focus:border-blue-400 outline-none text-gray-900"
                       />
                     </div>
 
                     <div className="relative">
+                    <a href="https://www.youtube.com/">testejhgjhghjgjhgjhghjghj teste</a>
                       <label className="sr-only">Mensagem</label>
                       <textarea
                         required
@@ -95,7 +96,7 @@ export default function Contact() {
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
                         placeholder="Deixe sua mensagem aqui..."
-                        className="w-full pl-4 pr-4 py-3 rounded-lg border-2 border-blue-200 focus:border-blue-400 outline-none resize-none"
+                        className="w-full pl-4 pr-4 py-3 rounded-lg border-2 border-blue-200 focus:border-blue-400 outline-none resize-none text-gray-900"
                       />
                     </div>
 

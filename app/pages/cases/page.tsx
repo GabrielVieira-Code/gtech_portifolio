@@ -116,9 +116,9 @@ export default function Cases() {
               </div>
 
               {/* Right image */}
-              <div className="md:col-span-6 relative p-6 md:p-8 bg-white/0 flex items-center justify-center h-full">
-                <Link href={active.repo} target="_blank" className="block rounded-lg overflow-hidden shadow-2xl max-w-full">
-                  <Image src={active.image} alt={active.title} width={2000} height={1250} className="w-full max-w-[1200px] lg:max-w-[1400px] h-auto object-contain hidden md:block" />
+              <div className="md:col-span-6 relative p-2 md:p-4 bg-white/0 flex items-center justify-center h-full">
+                <Link href={active.repo} target="_blank" className="block rounded-lg overflow-hidden shadow-2xl w-full">
+                  <Image src={active.image} alt={active.title} width={2000} height={1250} className="w-full h-auto object-contain hidden md:block" />
                   {/* show larger image on mobile */}
                   <Image src={active.image} alt={active.title} width={1200} height={800} className="w-11/12 h-auto object-contain md:hidden" />
                 </Link>
