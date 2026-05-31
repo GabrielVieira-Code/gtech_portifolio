@@ -81,7 +81,7 @@ export async function POST(request: NextRequest) {
     const msg = error instanceof Error ? error.message : String(error)
     console.error('[/api/contact] Erro ao publicar no SNS:', msg)
     return NextResponse.json(
-      { error: 'Erro interno. Tente novamente em instantes.' },
+      { error: 'Erro interno.', debug: msg },
       { status: 500 }
     )
   }
