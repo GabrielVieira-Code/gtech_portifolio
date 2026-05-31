@@ -3,12 +3,9 @@ import Image from "next/image";
 import Navbar from "./components/nav";
 import Footer from "./components/footer";
 import "./globals.css";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-
 export default function Home() {
   return (
     <>
-      <SpeedInsights />
       <Navbar />
       <main className="min-h-[calc(100vh-64px)]"> {/* ajusta se navbar tiver outra altura */}
         <section className="flex h-screen">
