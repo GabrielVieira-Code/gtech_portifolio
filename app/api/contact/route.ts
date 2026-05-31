@@ -88,5 +88,12 @@ export async function POST(request: NextRequest) {
 }
 
 export async function GET() {
-  return NextResponse.json({ error: 'Método não permitido.' }, { status: 405 })
+  return NextResponse.json({
+    env: {
+      API_REGION:             !!process.env.API_REGION,
+      API_ACCESS_KEY_ID:      !!process.env.API_ACCESS_KEY_ID,
+      API_SECRET_ACCESS_KEY:  !!process.env.API_SECRET_ACCESS_KEY,
+      SNS_TOPIC_ARN:          !!process.env.SNS_TOPIC_ARN,
+    }
+  })
 }
