@@ -44,7 +44,7 @@ export async function POST(request: NextRequest) {
   if (missing.length > 0) {
     console.error('[/api/contact] Variáveis de ambiente ausentes:', missing.join(', '))
     return NextResponse.json(
-      { error: 'Configuração incompleta no servidor.' },
+      { error: 'Configuração incompleta no servidor.', missing },
       { status: 500 }
     )
   }
