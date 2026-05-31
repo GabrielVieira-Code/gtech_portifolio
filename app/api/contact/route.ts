@@ -33,12 +33,12 @@ function buildMessage({ name, email, message }: ContactPayload): string {
 }
 
 export async function POST(request: NextRequest) {
-  const region    = process.env.AWS_REGION
-  const accessKey = process.env.AWS_ACCESS_KEY_ID
-  const secretKey = process.env.AWS_SECRET_ACCESS_KEY
+  const region    = process.env.API_REGION
+  const accessKey = process.env.API_ACCESS_KEY_ID
+  const secretKey = process.env.API_SECRET_ACCESS_KEY
   const topicArn  = process.env.SNS_TOPIC_ARN
 
-  const missing = ['AWS_REGION', 'AWS_ACCESS_KEY_ID', 'AWS_SECRET_ACCESS_KEY', 'SNS_TOPIC_ARN']
+  const missing = ['API_REGION', 'API_ACCESS_KEY_ID', 'API_SECRET_ACCESS_KEY', 'SNS_TOPIC_ARN']
     .filter(k => !process.env[k])
 
   if (missing.length > 0) {
