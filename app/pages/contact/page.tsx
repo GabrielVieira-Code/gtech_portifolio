@@ -8,16 +8,18 @@ import { FaUser, FaEnvelope, FaRegCommentDots, FaFacebookF, FaTwitter, FaInstagr
 
 export default function Contact() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [subject, setSubject] = useState('');
-  const [message, setMessage] = useState('');
+  const [errorMsg, setErrorMsg]       = useState('');
+  const [name, setName]               = useState('');
+  const [email, setEmail]             = useState('');
+  const [subject, setSubject]         = useState('');
+  const [message, setMessage]         = useState('');
 
-  const handleOpenModal = () => setIsModalOpen(true);
+  const handleOpenModal  = () => setIsModalOpen(true);
   const handleCloseModal = () => setIsModalOpen(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setErrorMsg('');
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
@@ -25,15 +27,17 @@ export default function Contact() {
         body: JSON.stringify({ name, email, subject, message }),
       });
 
-      if (!response.ok) throw new Error('Failed to send email');
+      const data = await response.json();
 
-      // show confirmation modal
+      if (!response.ok) {
+        setErrorMsg(data.error ?? 'Erro ao enviar. Tente novamente.');
+        return;
+      }
+
       handleOpenModal();
-      // reset form
       setName(''); setEmail(''); setSubject(''); setMessage('');
-    } catch (err) {
-      console.error(err);
-      // Could show an error modal/message here
+    } catch {
+      setErrorMsg('Falha de conexão. Tente novamente.');
     }
   };
 
@@ -99,6 +103,10 @@ export default function Contact() {
                         className="w-full pl-4 pr-4 py-3 rounded-lg border-2 border-blue-200 focus:border-blue-400 outline-none resize-none text-gray-900"
                       />
                     </div>
+
+                    {errorMsg && (
+                      <p className="text-red-600 text-sm text-center">{errorMsg}</p>
+                    )}
 
                     <button type="submit" className="w-full bg-gradient-to-r from-purple-500 to-violet-500 text-white py-3 rounded-lg font-semibold shadow-lg hover:opacity-95">
                       Enviar Mensagem
